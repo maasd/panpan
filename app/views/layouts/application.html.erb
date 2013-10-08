@@ -11,14 +11,14 @@
 		<link rel="stylesheet" type="text/css" class="ui" href="/css/semantic.min.css">
 		<link rel="stylesheet" type="text/css" class="ui" href="/fonts/sketchy.icons.css">
 		<!--link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'-->
-	  	<script src="/javascript/library/jquery.js"></script>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+	  	<%= javascript_include_tag "application" %>
 		<script src="/javascript/library/history.js"></script>
 		<script src="/javascript/library/easing.js"></script>
 		<script src="/javascript/library/ace/ace.js"></script>
 		<script src="/javascript/library/waypoints.js"></script>
 		<script src="/javascript/semantic.min.js"></script>
 		<script src="/javascript/panpan.js"></script>
-		<script src="/assets/jquery_ujs.js"></script>
 		<%= csrf_meta_tags %>
 	  	<%= yield(:head) %>
 	</head>
