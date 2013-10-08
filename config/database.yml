@@ -20,7 +20,9 @@ test: &test
 
 production:
     adapter: postgresql
-    database: papan_db
+    host: localhost
+    username: maasdianto
+    database: panpan_db
     pool: 5
     timeout: 5000
 
