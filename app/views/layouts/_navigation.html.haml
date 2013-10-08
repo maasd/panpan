@@ -1,0 +1,38 @@
+.ui.fixed.transparent.inverted.main.menu
+  .container
+    = link_to root_path, :class => "title item" do
+      %b Panpan:
+      Board all over
+    - if user_signed_in?
+      #prevmenu.disabled.item
+        %i.left.arrow.icon
+      .section.ui.dropdown.link.item
+        %span
+          Form
+          %i.dropdown.icon
+        .menu
+          .item
+            %a{:href => "index.html"} Home
+          .active.item
+            %a{:href => "form.html"} Form
+          .item
+            %a{:href => "dashboard.html"} Dashboard
+          .item
+            %a{:href => "settings.html"} Settings
+      #nextmenu.icon.item
+        %i.right.arrow.icon
+      .right.menu
+        = link_to edit_user_registration_path, :title => "Edit Account", :class => "popup icon item" do
+          %i.id.icon
+          = current_user.name
+        = link_to 'Sign Out', destroy_user_session_path, :method => "delete", :class => "popup icon item"
+        /
+          a class="popup icon item" title="View project on Github" href="https://github.com/quirkyinc/semantic">
+          <i class="icon github"></i>
+          </a
+    - else
+      .right.menu
+        = link_to new_user_session_path, :title => "Sign In", :class => "popup icon item" do
+          %i.unlock.icon
+        = link_to new_user_registration_path, :title => "Sign Up", :class => "popup icon item" do
+          %i.add.user.icon

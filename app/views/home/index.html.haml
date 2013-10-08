@@ -1,0 +1,16 @@
+.masthead
+  .ui.responsive.grid
+    .column
+      .introduction
+        %h1.ui.header
+          Panpan
+          %span.ui.black.label Pre-release
+        %h2.ui.header Personal board to share with other people around the web.
+        %p Panpan let you organized task, appointment and let's people.
+        - if not user_signed_in?
+          = link_to new_user_session_path, :title => "Sign In", :class => "ui facebook button" do
+            %i.facebook.icon
+            Sign In
+          = link_to new_user_registration_path, :title => "Sign Up", :class => "ui twitter button" do
+            %i.twitter.icon
+            Sign Up

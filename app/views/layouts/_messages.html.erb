@@ -1,7 +1,0 @@
-<% flash.each do |name, msg| %>
-	<% if name = "alert" %>
-		<%= content_tag :div, msg, :id => "flash_#{name}", :class => "ui red message" %>
-	<% else %>
-		<%= content_tag :div, msg, :id => "flash_#{name}", :class => "ui message" %>
-	<% end %>
-<% end %>

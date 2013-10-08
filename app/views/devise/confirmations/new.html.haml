@@ -1,0 +1,13 @@
+.resend_confirmation_instructions
+  .ui.attached.message
+    .header
+      Resend confirmation instructions
+    = devise_error_messages!
+  = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post, :class => "ui form attached segment" }) do |f|
+    .field
+      = f.label :email
+      %br/
+      = f.text_field :email, :autofocus => true
+    %div= f.submit "Resend confirmation instructions",  :class => "ui blue submit button"
+  .ui.bottom.attached.info.message
+    = render "devise/shared/links"

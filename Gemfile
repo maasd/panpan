@@ -6,6 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'sqlite3',  :group => [:development, :test]
 gem 'pg'
 
+gem 'erb2haml', :group => :development
+gem 'haml-rails'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

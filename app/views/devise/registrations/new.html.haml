@@ -1,0 +1,23 @@
+.signup
+  .ui.attached.message
+    .header
+      Sign Up
+    %p Please fill the form to Sign Up.
+    = devise_error_messages!
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "ui form attached segment"}) do |f|
+    .field
+      = f.label :name
+      = f.text_field :name, :autofocus => true, :placeholder => "Name"
+    .field
+      = f.label :email
+      = f.text_field :email, :placeholder => "Email"
+    .field
+      = f.label :password
+      = f.password_field :password
+    .field
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+    %div
+      = f.submit "Sign Up", :class => "ui blue submit button"
+  .ui.bottom.attached.info.message
+    = render "devise/shared/links"
