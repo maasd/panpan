@@ -13,3 +13,37 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Merge turds
+*.orig
+
+# Ignore ruby schema (migrations should be authoritative)
+db/schema.rb
+
+# CTags turds
+.tags
+.tags_sorted_by_file
+
+# Fixtures
+/test/fixtures/*.yml
+
+# Heroku/Taps turds
+push_*.dat
+
+# Finder turds
+.DS_Store
+
+# RBenv
+.rbenv-version
+
+# Script turds
+nohup.out
+
+# Coveralls output
+/coverage
+
+# Database configuration
+/config/database.yml
+
+# Ignore application configuration
+/config/application.yml
