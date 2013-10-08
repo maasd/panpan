@@ -31,19 +31,13 @@ db/schema.rb
 push_*.dat
 
 # Finder turds
-.DS_Store
+*.DS_Store
 
 # RBenv
 .rbenv-version
 
-# Script turds
-nohup.out
-
-# Coveralls output
-/coverage
-
 # Database configuration
-config/database.yml
+/config/database.yml
 
 # Ignore application configuration
-config/application.yml
+/config/application.yml
