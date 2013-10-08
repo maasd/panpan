@@ -1,0 +1,20 @@
+<div class="send_reset_password_instruction">
+<div class="ui attached message">
+	<div class="header">
+	    Forgot your password?
+	</div>
+	<%= devise_error_messages! %>
+</div>
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => "ui form attached segment" }) do |f| %>
+
+  <div class="field">
+	<%= f.label :email %>
+  	<%= f.text_field :email, :autofocus => true %>
+  </div>
+
+  <div><%= f.submit "Send me reset password instructions",  :class => "ui blue submit button" %></div>
+<% end %>
+<div class="ui bottom attached info message">
+  <%= render "devise/shared/links" %>
+</div>
+</div>

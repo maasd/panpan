@@ -1,0 +1,47 @@
+<div class="ui fixed transparent inverted main menu">
+    <div class="container">
+		<%= link_to root_path, :class => "title item" do %>
+			<b>Panpan:</b> Board all over
+		<% end %>
+		<% if user_signed_in? %>
+			<div id="prevmenu" class="disabled item"><i class="left arrow icon"></i></div>
+		    <div class="section ui dropdown link item">
+		        <span></i> Form <i class="dropdown icon"></i></span>
+		        <div class="menu">
+		            <div class="item">
+		              <a href="index.html">Home</a>
+		            </div>
+		            <div class="active item">
+		              <a href="form.html">Form</a>
+		            </div>
+		            <div class="item">
+		              <a href="dashboard.html">Dashboard</a>
+		            </div>
+		            <div class="item">
+		              <a href="settings.html">Settings</a>
+		            </div>
+		        </div>
+		    </div>
+		    <div id="nextmenu" class="icon item" ><i class="right arrow icon"></i></div>
+			<div class="right menu">
+				<%= link_to edit_user_registration_path, :title => "Edit Account", :class => "popup icon item" do %>
+					<i class="id icon"></i>
+					<%= current_user.name %>
+				<% end %>
+				<%= link_to 'Sign Out', destroy_user_session_path, :method => "delete", :class => "popup icon item" %>
+	        	<!--a class="popup icon item" title="View project on Github" href="https://github.com/quirkyinc/semantic">
+	          		<i class="icon github"></i>
+	        	</a-->
+	      	</div>
+		<% else %>
+			<div class="right menu">
+				<%= link_to new_user_session_path, :title => "Sign In", :class => "popup icon item" do %>
+					<i class="unlock icon"></i>
+				<% end %>
+				<%= link_to new_user_registration_path, :title => "Sign Up", :class => "popup icon item" do %>
+					<i class="add user icon"></i>
+				<% end %>
+	      	</div>
+		<% end %>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="signin">
+<div class="ui attached message">
+  <div class="header">
+    Sign In
+  </div>
+  <p>To log in please fill form with your email and password.</p>
+</div>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "ui form attached segment"}) do |f| %>
+    <%= render 'layouts/messages' %>
+	<div class="field">
+		<label><%= f.label :email %></label>
+		<div class="ui left labeled icon input">
+			<%= f.email_field :email, :autofocus => true, :placeholder => "Email" %>
+	        <i class="user icon"></i>
+	        <div class="ui corner label">
+	        	<i class="icon asterisk"></i>
+	        </div>
+		</div>
+	</div>
+	<div class="field">
+		<label><%= f.label :password %></label>
+		<div class="ui left labeled icon input">
+			<%= f.password_field :password %>
+	        <i class="lock icon"></i>
+	        <div class="ui corner label">
+	        	<i class="icon asterisk"></i>
+	        </div>
+		</div>
+	</div>
+
+  <% if devise_mapping.rememberable? -%>
+	<div class="inline field">
+	    <div class="ui checkbox">
+	      <%= f.check_box :remember_me %>
+	      <label for="user_remember_me"></label>
+	    </div>
+	    <label><%= f.label :remember_me %></label>
+	</div>
+  <% end -%>
+  <div><%= f.submit "Sign in", :class => "ui blue submit button" %></div>
+<% end %>
+<div class="ui bottom attached info message">
+  <%= render "devise/shared/links" %>
+</div>
+</div>
