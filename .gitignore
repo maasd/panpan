@@ -37,7 +37,7 @@ push_*.dat
 .rbenv-version
 
 # Database configuration
-/config/database.yml
+config/database.yml
 
 # Ignore application configuration
-/config/application.yml
+config/application.yml
