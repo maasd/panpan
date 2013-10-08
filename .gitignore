@@ -31,7 +31,7 @@ db/schema.rb
 push_*.dat
 
 # Finder turds
-*.DS_Store
+.DS_Store
 
 # RBenv
 .rbenv-version

@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 # database
-gem 'sqlite3',  :group => [:development, :test]
+# gem 'sqlite3',  :group => [:development, :test]
 gem 'pg'
 
 group :assets do
